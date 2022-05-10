@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- website -->
+    <link rel="icon" type="image/gif" sizes="32x32" href="../img/avatars/pr.gif">
+    <link rel="icon" type="image/gif" sizes="16x16" href="../img/avatars/pr.gif">
+    <link rel="shortcut icon" href="../img/avatars/pr.gif">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приложение с ботом</title>
+
+    <!-- link preview -->
+    <meta name="theme-color" content="#7f78bd">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="🎗️ Абоба 🎗️">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:image" content="https://zippw.xyz/img/banner.png">
+    <meta property="og:site_name" content="СКАЧАТЬ ПРИЛОЖЕНИЕ-БОТ">
+    <meta property="og:url" content="https://zippw.xyz/program">
+    <meta property="og:title" content="Моё портфолио">
+
+    <!-- css -->
+    <link rel="stylesheet" href="../css/details.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../js/lib/context/skins/osx-dark.css" type="text/css" id="skin" />
+
+    <!-- fonts -->
+     <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+    <link rel="stylesheet" href="../css/all.min.css">
+</head>
+
+<body>
+    <script>
+        window.onload = async function () { document.querySelector(".ml6 .lettersAnimation").innerHTML = document.querySelector(".ml6 .lettersAnimation").textContent.replace(/\S/g, "<span class='letter'>$&</span>"), document.body.classList.add("loaded_hiding"), await window.setTimeout(async function () { document.body.classList.add("loaded"), document.body.classList.remove("loaded_hiding"), await anime.timeline({ loop: !1, onload: !0 }).add({ targets: ".ml6 .letter", opacity: [0, 1], translateY: ["-1.1em", 0], translateZ: 0, duration: 250, delay: (t, e) => 20 * e }), await anime.timeline().add({ targets: "#navbarButton", translateX: [-10, 0], opacity: [0, 1], duration: 1e3, delay: (t, e) => 50 * e }) }, 500) };
+    </script>
+
+    <div class="preloader">
+        <img class="gooey__img" src="../img/preloader_logo.png">
+        <div class="gooey">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="notify"></div>
+
+    <!-- top-line -->
+    <section class="noselect top-line h" id="top-line">
+        <div class=" container-fluid">
+            <div class="row">
+                <div class="col-md-12" style="padding-right: 0">
+                    <div id="hide" class="logo" alt="">
+                        <a itemprop="url" tabindex="0" href="../" alt="DISCORD" title="На главную">
+                            <!-- <img itemprop="logo" draggable="false" class="hoverable" id="logo" src="./img/logo.svg"> -->
+                            <h1 class="ml6 logoTextAlt noselect">
+                                <span class="text-wrapper">
+                                    <span class="lettersAnimation">ZippWitch ~</span>
+                                </span>
+                            </h1>
+                        </a>
+                    </div>
+
+                    <div class="menu-head">
+                        <ul id="hide">
+                            <li itemprop="name" id="navbarButton">
+                                <a itemprop="url" tabindex="0" class="underline__right" href="../portfolio">
+                                    <i class="fas fa-user"></i> Портфолио
+                                </a>
+                            </li>
+                            <li itemprop="name" id="navbarButton">
+                                <a itemprop="url" tabindex="0" class="underline__right" href="../music">
+                                    <i class="fas fa-music"></i> Музыка
+                                </a>
+                            </li>
+                            <li itemprop="name" id="navbarButton">
+                                <a itemprop="url" tabindex="0" class="underline__right" href="../team">
+                                    <i class="fas fa-handshake"></i> Лучшие
+                                </a>
+                            </li>
+                            <li itemprop="name" id="navbarButton"><a itemprop="url" tabindex="0"
+                                    class="underline__right" href="https://www.donationalerts.com/r/zippwitch"><i
+                                        class="fas fa-coffee"></i>
+                                    Донат</a></li>
+                            <li itemprop="name" id="navbarButton">
+                                <a itemprop="url" tabindex="0" title="Нажмите L для переключения темы"
+                                    class="underline__right" onclick="changeTheme()"><i id="themeButtonIcon"
+                                        class="fas fa-sun-o"></i> Тема
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="hamburger" class="hamburger-menu">
+                    <input id="menu__toggle" type="checkbox"
+                        onclick="this.checked?anime.timeline().add({targets:'.menu__box',translateX:['-120%','-30%'],duration:800}).add({targets:'#menu__item',translateX:[-10,0],duration:300,delay:(e,a)=>50*a}):anime.timeline().add({targets:'.menu__box',translateX:['-30%','-20%'],duration:150,easing:'easeInOutCubic'}).add({targets:'.menu__box',translateX:['-20%','-120%'],duration:400,easing:'easeInOutCubic'});" />
+                    <label class="menu__btn" for="menu__toggle">
+                        <span></span>
+                    </label>
+                    <ul class="menu__box">
+                        <li id="menu__item">
+                            <div class="menu__item-icon-container"><i class="fas fa-home"></i></div>
+                            <div class="menu__item-text-container"><a class="" href="https://zippw.xyz/">Главная</a>
+                            </div>
+                        </li>
+                        <li id="menu__item">
+                            <div class="menu__item-icon-container"><i class="fas fa-user"></i></div>
+                            <div class="menu__item-text-container"><a href="https://zippw.xyz/portfolio">Портфолио</a>
+                            </div>
+                        </li>
+                        <li id="menu__item">
+                            <div class="menu__item-icon-container"><i class="fas fa-music"></i></div>
+                            <div class="menu__item-text-container"><a href="https://zippw.xyz/music">Музыка</a></div>
+                        </li>
+                        <li id="menu__item">
+                            <div class="menu__item-icon-container"><i class="fas fa-handshake"></i></div>
+                            <div class="menu__item-text-container"><a href="https://zippw.xyz/team">Лучшие</a></div>
+                        </li>
+                        <li id="menu__item">
+                            <div class="menu__item-icon-container"><i class="fas fa-coffee"></i></div>
+                            <div class="menu__item-text-container"><a
+                                    href="https://www.donationalerts.com/r/zippwitch">Донат</a></div>
+                        </li>
+                        <li id="menu__item">
+                            <div class="menu__item-icon-container"><i id="" class="fas fa-sun-o"></i></div>
+                            <div class="menu__item-text-container"><a onclick="changeTheme()">Тема</a></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- bg effects -->
+    <div class="area">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div id="progress_line"></div>
+
+    <!-- content -->
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+    </style>
+    <main>
+        <section>
+            <div class="container2 col-12 col-sm-10 col-md-10 col-xl-7">
+                <div style="background: url(../img/bgs/bg4.jpg);" class="row2 additemForm t3 tempDiv">
+                    <div class="col-md-4">
+                        <img src="../img/avatars/pr.gif" onerror="this.src='../img/avatars/avatar.gif'"
+                            class="itemPersonalPage avatar black2">
+                        <a class="tempBtn boost black2" style="border-radius: 0;" href="https://cloud.mail.ru/public/ZtCu/Yn3YzrU1T"
+                            download>Скачать бета (Win 10)</a>
+                        <a class="tempBtn boost black2" href="https://cloud.mail.ru/public/KLtv/ebKqEeWHA"
+                            download>Скачать (Win 10)</a>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="container2">
+                            <br>
+                            <div class="row2 centeredContent">
+                                <img class="itemPersonalPage lang" src="../img/icons/JavaScript.svg" alt="ЯП"
+                                    title="ru">
+                                <h1 class="itemPersonalPage name centeredContent" style="margin: 0;">Dc bot program
+                                </h1>
+                            </div>
+                            <br>
+                            <class class="row2 itemPersonalPage des centeredContent">
+                                Поддерживается на Windows<br><br>
+                                Инструкция по установке:<br>
+                                <ul>
+                                    <li>Запустить exe установщик</li>
+                                    <li>Программа запустится после установки</li>
+                                    <li>Программа установится в:<br>C:\Users\имя\AppData\Local\Programs\discord-bot</li>
+                                    <li>Заходим на <a style="color: #00AFEE; text-decoration: underline;"
+                                            href="https://discord.com/developers/applications">Discord Developer
+                                            Portal</a></li>
+                                    <li>Нажимаем на New Application</li>
+                                    <li>Заходим во вкладку Bot</li>
+                                    <li>Нажимаем на Add Bot</li>
+                                    <li>Нажимаем Copy под <a>Click to Reveal Token</a> и сохраняем изменения (<a
+                                            style="color: #00AFEE; text-decoration: underline;"
+                                            href="https://cdn.discordapp.com/attachments/878800042956292146/885182347597729792/unknown.png">скриншот</a>)
+                                    </li>
+                                    <br>Вы можете убрать запись последнего введённого токена в конфиге. По умолчанию токен переписывается.
+                                </ul><br>Я отвечаю за безопасность этого приложения. Оно без сертификата, поэтому не опознаётся виндой.
+                                </article>
+                        </div>
+                    </div>
+                    <div class="screenshots">
+                        <h1>Скриншоты</h1>
+                        <section class="pictures">
+                            <a class="screenshotsA" href="#screenshot">
+                                <img class="img"
+                                    src="https://cdn.discordapp.com/attachments/878800042956292146/885182347597729792/unknown.png">
+                            </a>
+                            <a href="#" class="full screenshotsA"
+                                style="background-image:url(https://cdn.discordapp.com/attachments/878800042956292146/885182347597729792/unknown.png)"></a>
+                            <a class="screenshotsA" href="#screenshot">
+                                <img class="img"
+                                    src="https://cdn.discordapp.com/attachments/878800042956292146/885185204170412083/unknown.png">
+                            </a>
+                            <a href="#" class="full screenshotsA"
+                                style="background-image:url(https://cdn.discordapp.com/attachments/878800042956292146/885185204170412083/unknown.png)"></a>
+                        </section>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/lib/context/context.js"></script>
+    <script>
+        const skinActivator = t => { document.getElementById("skin").setAttribute("href", `../js/lib/context/skins/${t.data.value}.css`), t.handled = !0 }, chromeContextMenu = new ContextMenu(document.body, [{ text: "Назад", icon: "arrow-left", hotkey: "Alt+Стрелка влево", disabled: !(window.history.length > 1), onclick: t => { window.history.back() } }, { text: "Вперёд", icon: "arrow-right", hotkey: "Alt+Стрелка вправо", disabled: !0, onclick: t => { window.history.forward() } }, { text: "Перезагрузить", icon: "refresh", hotkey: "Ctrl+R", onclick: t => { window.location.reload() } }, null, { text: "Сменить тему", icon: "adjust", hotkey: "L", onclick: t => { changeTheme() } }, null, { text: "Печать...", icon: "print", hotkey: "Ctrl+P", onclick: t => { chromeContextMenu.hide(), window.print() } }, null, { text: " Просмотр кода страницы", icon: "code-o", hotkey: "Ctrl+U", onclick: t => { window.open("view-source:zippw.xyz") } }]); chromeContextMenu.install();
+    </script>
+
+    <!-- libraries local -->
+    <script src="../js/lib/esm/index.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/lib/anime.min.js"></script>
+
+    <!-- libraries  public -->
+    <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script> -->
+
+    <!-- stock -->
+</body>
+
+</html>

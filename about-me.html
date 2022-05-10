@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- website  -->
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="img/favicons/site.webmanifest">
+    <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#7F78BD">
+    <meta name="msapplication-TileColor" content="#7f78bd">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обо мне</title>
+
+    <!-- link preview -->
+    <meta name="theme-color" content="#7f78bd">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="🎗️ Абоба 🎗️">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:image" content="https://zippw.xyz/img/banner.png">
+    <meta property="og:site_name" content="ОБО МНЕ">
+    <meta property="og:url" content="https://zippw.xyz/about-me">
+    <meta property="og:title" content="Моё портфолио">
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./js/lib/context/skins/osx-dark.css" type="text/css" id="skin" />
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+</head>
+
+<body>
+
+    <script>
+        window.onload=async function(){document.querySelector(".ml6 .lettersAnimation").innerHTML=document.querySelector(".ml6 .lettersAnimation").textContent.replace(/\S/g,"<span class='letter'>$&</span>"),document.body.classList.add("loaded_hiding"),await window.setTimeout(async function(){document.body.classList.add("loaded"),document.body.classList.remove("loaded_hiding"),await anime.timeline({loop:!1,onload:!0}).add({targets:".ml6 .letter",opacity:[0,1],translateY:["-1.1em",0],translateZ:0,duration:250,delay:(t,e)=>20*e}),await anime.timeline().add({targets:"#navbarButton",translateX:[-10,0],opacity:[0,1],duration:1e3,delay:(t,e)=>50*e})},500)};
+    </script>
+
+    <div class="preloader">
+        <img class="gooey__img" src="./img/preloader_logo.png">
+        <div class="gooey">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div id="notify"></div>
+
+    <!-- top-line -->
+    <section class="noselect top-line h" id="top-line">
+        <div class=" container-fluid">
+            <div class="row">
+                <div class="col-md-12" style="padding-right: 0">
+                    <div id="hide" class="logo" alt="">
+                        <a itemprop="url" tabindex="0" href="./" alt="DISCORD" title="На главную">
+                            <!-- <img itemprop="logo" draggable="false" class="hoverable" id="logo" src="./img/logo.svg"> -->
+                            <h1 class="ml6 logoTextAlt noselect">
+                                <span class="text-wrapper">
+                                    <span class="lettersAnimation">ZippWitch ~</span>
+                                </span>
+                            </h1>
+
+                        </a>
+                    </div>
+
+                    <div class="menu-head">
+                        <ul id="hide">
+                            <li itemprop="name" id="navbarButton">
+                                <a itemprop="url" tabindex="0" class="underline__right" href="./portfolio">
+                                    <i class="fas fa-user"></i> Портфолио
+                                </a>
+                            </li>
+                            <li itemprop="name" id="navbarButton">
+                                <a itemprop="url" tabindex="0" class="underline__right" href="https://zippmusic.herokuapp.com">
+                                    <i class="fas fa-music"></i> Музыка
+                                </a>
+                            </li>
+                            <li itemprop="name" id="navbarButton">
+                                <a itemprop="url" tabindex="0" class="underline__right" href="./team">
+                                    <i class="fas fa-handshake"></i> Лучшие
+                                </a>
+                            </li>
+                            <li itemprop="name" id="navbarButton"><a itemprop="url" tabindex="0" class="underline__right"
+                                    href="https://www.donationalerts.com/r/zippwitch"><i class="fas fa-coffee"></i>
+                                    Донат</a></li>
+                            <li itemprop="name" id="navbarButton">
+                                <a itemprop="url" tabindex="0" title="Нажмите L для переключения темы"
+                                class="underline__right" onclick="changeTheme()"><i id="themeButtonIcon"
+                                    class="fas fa-sun-o"></i> Тема
+                            </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="hamburger" class="hamburger-menu">
+                    <input id="menu__toggle" type="checkbox" onclick="this.checked?anime.timeline().add({targets:'.menu__box',translateX:['-120%','-30%'],duration:800}).add({targets:'#menu__item',translateX:[-10,0],duration:300,delay:(e,a)=>50*a}):anime.timeline().add({targets:'.menu__box',translateX:['-30%','-20%'],duration:150,easing:'easeInOutCubic'}).add({targets:'.menu__box',translateX:['-20%','-120%'],duration:400,easing:'easeInOutCubic'});" />
+                    <label class="menu__btn" for="menu__toggle">
+                        <span></span>
+                    </label>
+                    <ul class="menu__box">
+                        <li id="menu__item">
+                            <div class="menu__item-icon-container"><i class="fas fa-home"></i></div>
+                            <div class="menu__item-text-container"><a class="" href="https://zippw.xyz/">Главная</a>
+                            </div>
+                        </li>
+                        <li id="menu__item">
+                            <div class="menu__item-icon-container"><i class="fas fa-user"></i></div>
+                            <div class="menu__item-text-container"><a href="https://zippw.xyz/portfolio">Портфолио</a>
+                            </div>
+                        </li>
+                        <li id="menu__item">
+                            <div class="menu__item-icon-container"><i class="fas fa-music"></i></div>
+                            <div class="menu__item-text-container"><a href="https://zippmusic.herokuapp.com">Музыка</a></div>
+                        </li>
+                        <li id="menu__item">
+                            <div class="menu__item-icon-container"><i class="fas fa-handshake"></i></div>
+                            <div class="menu__item-text-container"><a href="https://zippw.xyz/team">Лучшие</a></div>
+                        </li>
+                        <li id="menu__item">
+                            <div class="menu__item-icon-container"><i class="fas fa-coffee"></i></div>
+                            <div class="menu__item-text-container"><a
+                                    href="https://www.donationalerts.com/r/zippwitch">Донат</a></div>
+                        </li>
+                        <li id="menu__item">
+                            <div class="menu__item-icon-container"><i id="" class="fas fa-sun-o"></i></div>
+                            <div class="menu__item-text-container"><a onclick="changeTheme()">Тема</a></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- bg effects -->
+    <div class="area">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <!-- content -->
+
+
+    <style>
+        body {
+            background-color: #100e17;
+        }
+
+        .container {
+            align-items: center;
+            position: absolute;
+            height: 300px;
+            width: 600px;
+            top: auto;
+            left: calc(50% - 300px);
+            display: flex;
+        }
+
+        .containerNext {
+            align-items: center;
+            position: absolute;
+            height: 300px;
+            width: 600px;
+            top: 600px;
+            left: calc(50% - 300px);
+            display: flex;
+        }
+
+        .card {
+            display: flex;
+            height: 280px;
+            width: 200px;
+            background-color: #17141d;
+            border-radius: 10px;
+            box-shadow: -1rem 0 3rem #000;
+            /*   margin-left: -50px; */
+            transition: 0.4s ease-out;
+            position: relative;
+            left: 0px;
+            border: 3px solid rgba(255, 255, 255, 0.575)
+        }
+
+        .card:not(:first-child) {
+            margin-left: -50px;
+        }
+
+        .card:hover {
+            transform: translateY(-20px);
+            transition: 0.4s ease-out;
+        }
+
+        .card:hover~.card {
+            position: relative;
+            left: 50px;
+            transition: 0.4s ease-out;
+        }
+
+        .title {
+            color: white;
+            font-weight: 300;
+            position: absolute;
+            left: 20px;
+            top: 15px;
+        }
+
+        .bar {
+            position: absolute;
+            top: 100px;
+            left: 20px;
+            height: 5px;
+            width: 150px;
+        }
+
+        .emptybar {
+            background-color: #2e3033;
+            width: 130px;
+            height: 100%;
+        }
+
+        .filledbar {
+            position: absolute;
+            top: 0px;
+            z-index: 3;
+            width: 0px;
+            height: 100%;
+            background: #a965ec;
+            background: linear-gradient(90deg, #a965ec 20%, cyan 100%);
+            transition: 0.6s ease-out;
+        }
+
+        .pic {
+            top: 150px;
+            left: calc(50% - 60px);
+            width: 120px;
+        }
+
+        .pic1 {
+            top: 175px;
+            left: calc(50% - 30px);
+            width: 90px;
+        }
+
+        .pic2 {
+            top: 200px;
+            left: calc(50% - 40px);
+            width: 100px;
+        }
+
+        .pic3 {
+            top: 225px;
+            left: calc(50% - 53px);
+            width: 113px;
+        }
+
+        #picture {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.4);
+            height: 11px;
+            border-radius: 20px;
+            transition: .5s
+        }
+
+        .lead {
+            position: absolute;
+            color: #fff;
+            text-align: right;
+            line-height: 25px;
+            right: none;
+            top: 145px;
+            left: calc(50% - 60px);
+            background: transparent;
+            opacity: 0;
+            transition: .4s;
+        }
+
+        @media (max-width: 900px) {
+            .container {
+                transform: scale(0.65)
+            }
+        }
+
+        .h2-main {
+            font-size: 70px;
+            transition: font-size .3s;
+            color: #fff
+        }
+
+        @media screen and (max-width: 436px) {
+            .h2-main {
+                font-size: 20px
+            }
+        }
+
+        @media screen and (max-width: 933px) {
+            .h2-main {
+                font-size: 50px
+            }
+        }
+
+        @media screen and (max-width: 667px) {
+            .h2-main {
+                font-size: 40px
+            }
+        }
+
+        @media screen and (max-width: 537px) {
+            .h2-main {
+                font-size: 30px
+            }
+        }
+
+        @media screen and (max-width: 311px) {
+            .h2-main {
+                font-size: 40px
+            }
+
+            .paragraph {
+                font-size: 10px
+            }
+        }
+
+        .card:hover .lead {
+            opacity: 1
+        }
+
+        .card:hover #picture {
+            opacity: 0
+        }
+
+        .stroke {
+            stroke: white;
+            stroke-dasharray: 360;
+            stroke-dashoffset: 360;
+            transition: 0.6s ease-out;
+        }
+
+        svg {
+            fill: #17141d;
+            stroke-width: 2px;
+        }
+
+        .card:hover .stroke {
+            stroke-dashoffset: 100;
+            transition: 0.6s ease-out;
+        }
+
+        p {
+            color: #fff
+        }
+
+        h1 {
+            position: relative;
+            font-size: 50px;
+            z-index: 1;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .header {
+            margin-top: -100px;
+            margin-bottom: 700px;
+            text-align: center;
+        }
+
+        /* @media screen and (max-width: ) {
+            
+        } */
+
+        .fancy {
+            line-height: 0.5;
+            text-align: center;
+        }
+
+        .fancy span {
+            font-family: 'Montserrat Light', sans-serif;
+            font-style: bold;
+            display: inline-block;
+            position: relative;
+        }
+
+        .fancy span:before,
+        .fancy span:after {
+            content: "";
+            position: absolute;
+            height: 5px;
+            border-bottom: 1px solid white;
+            top: 0;
+            width: 400px;
+        }
+
+        .fancy span:before {
+            right: 100%;
+            margin-right: 15px;
+        }
+
+        .fancy span:after {
+            left: 100%;
+            margin-left: 15px;
+        }
+
+        .paragraph {
+            margin-top: 30px;
+            color: #ffffff99;
+            font-family: 'Montserrat Light';
+            transition: .3s;
+        }
+    </style>
+
+    <script>
+        const scheme = {
+            'css': 63,
+            'html': 85,
+            'js': 70,
+            'music': 100
+        }
+    </script>
+
+    <div class="header">
+        <!-- <h1>~ Обо мне ~</h1>
+        <p class="fancy"><span>ZippWitch</span></p>
+        <p class="paragraph">Я Валера. Живу в Климовске. Очень плохо с сочинениям, но очень хорошо всё с русским.<br>
+            Свою первую программу написал в 2019м году, когда любил делать всё по туториалам с ютуба. Со временем, когда
+            <br>
+            всё написанное устарело - мне ничего не оставалось, как перевести на более новый уровень моё приложение. У
+            меня был сервер<br>
+            дискорд, который всё не хотел развиваться, но через 2 года я смог достичь 700 участников. Очень жаль, что
+            сервер никому<br>
+            больше не пригождался и в скором времени я всех кикнул. Умный ход, ведь когда <br>
+            я стану популярным, возможно, опубликую его снова<br>
+            Впринципе, о том, чем я занимался и когда можно размышлять бесконечно долго, <br>
+            но всё же вкрадце о моих "масштабных" можно прочитать на страничке <a href="portfolio">портфолио</a>.
+        </p> -->
+
+        <h2 class="lt h2-main">~ Мои скиллы и хобби ~</h2>
+        <p class="lt fancy"><span>ZippWitch</span></p>
+    </div>
+    <div class="lt container">
+        <div onmouseover="document.getElementsByClassName('filledbar')[0].style.transition='0.4s ease-out'; document.getElementsByClassName('filledbar')[0].style.width =`${130 * scheme['html'] / 100}px`"
+            onmouseout="document.getElementsByClassName('filledbar')[0].style.transition='0.4s ease-out'; document.getElementsByClassName('filledbar')[0].style.width ='0px'"
+            class="card">
+            <h3 class="title">
+                <img style="height: 22px;" src="./img/icons/HTML.svg" alt="ЯП" title="ru"> HTML
+            </h3>
+            <div class="bar">
+                <div class="emptybar"></div>
+                <div class="filledbar"></div>
+            </div>
+            <div class="lead">Знание 85%<br>Начал изучать:<br>13 . 05 . 2021</div>
+            <div id="picture" class="pic"></div>
+            <div id="picture" class="pic1"></div>
+            <div id="picture" class="pic2"></div>
+            <div id="picture" class="pic3"></div>
+        </div>
+        <div onmouseover="document.getElementsByClassName('filledbar')[1].style.transition='0.4s ease-out'; 
+        document.getElementsByClassName('filledbar')[1].style.width =`${130 * scheme['css'] / 100}px`" onmouseout="document.getElementsByClassName('filledbar')[1].style.transition='0.4s ease-out';
+             document.getElementsByClassName('filledbar')[1].style.width ='0px'" class="card">
+            <h3 class="title">
+                <img style="height: 22px;" src="./img/icons/CSS.svg" alt="ЯП" title="ru"> CSS
+            </h3>
+            <div class="bar">
+                <div class="emptybar"></div>
+                <div class="filledbar"></div>
+            </div>
+            <div class="lead">Знание 63%<br>Начал изучать:<br>18 . 05 . 2021</div>
+            <div id="picture" class="pic"></div>
+            <div id="picture" class="pic1"></div>
+            <div id="picture" class="pic2"></div>
+            <div id="picture" class="pic3"></div>
+        </div>
+        <div onmouseover="document.getElementsByClassName('filledbar')[2].style.transition='0.4s ease-out'; document.getElementsByClassName('filledbar')[2].style.width =`${130 * scheme['js'] / 100}px`"
+            onmouseout="document.getElementsByClassName('filledbar')[2].style.transition='0.4s ease-out'; document.getElementsByClassName('filledbar')[2].style.width ='0px'"
+            class="card">
+            <h3 class="title">
+                <img style="height: 22px;" src="./img/icons/JavaScript.svg" alt="ЯП" title="ru"> JavaScript
+            </h3>
+            <div class="bar">
+                <div class="emptybar"></div>
+                <div class="filledbar"></div>
+            </div>
+            <div class="lead">Знание 70%<br>Сертификат;<br>Начал изучать:<br>6 . 02 . 2019</div>
+            <div id="picture" class="pic"></div>
+            <div id="picture" class="pic1"></div>
+            <div id="picture" class="pic2"></div>
+            <div id="picture" class="pic3"></div>
+        </div>
+        <div onmouseover="document.getElementsByClassName('filledbar')[3].style.transition='0.4s ease-out'; document.getElementsByClassName('filledbar')[3].style.width =`${130 * scheme['music'] / 100}px`"
+            onmouseout="document.getElementsByClassName('filledbar')[3].style.transition='0.4s ease-out'; document.getElementsByClassName('filledbar')[3].style.width ='0px'"
+            class="card">
+            <h3 class="title">
+                <img style="height: 22px;" src="./img/icons/Music.svg" alt="ЯП" title="ru"> Музыка
+            </h3>
+            <div class="bar">
+                <div class="emptybar"></div>
+                <div class="filledbar"></div>
+            </div>
+            <div class="lead">Знание 100%<br>Фортепиано;<br>Начал изучать:<br>8 лет назад</div>
+            <div id="picture" class="pic"></div>
+            <div id="picture" class="pic1"></div>
+            <div id="picture" class="pic2"></div>
+            <div id="picture" class="pic3"></div>
+        </div>
+    </div>
+
+    <script src="./js/lib/context/context.js"></script>
+    <script>
+        const skinActivator = t => { document.getElementById("skin").setAttribute("href", `./js/lib/context/skins/${t.data.value}.css`), t.handled = !0 }, chromeContextMenu = new ContextMenu(document.body, [{ text: "Назад", icon: "arrow-left", hotkey: "Alt+Стрелка влево", disabled: !(window.history.length > 1), onclick: t => { window.history.back() } }, { text: "Вперёд", icon: "arrow-right", hotkey: "Alt+Стрелка вправо", disabled: !0, onclick: t => { window.history.forward() } }, { text: "Перезагрузить", icon: "refresh", hotkey: "Ctrl+R", onclick: t => { window.location.reload() } }, null, { text: "Сменить тему", icon: "adjust", hotkey: "L", onclick: t => { changeTheme() } }, null, { text: "Печать...", icon: "print", hotkey: "Ctrl+P", onclick: t => { chromeContextMenu.hide(), window.print() } }, null, { text: " Просмотр кода страницы", icon: "code-o", hotkey: "Ctrl+U", onclick: t => { window.open("view-source:zippw.xyz") } }]); chromeContextMenu.install();
+    </script>
+
+
+    <!-- libraries local-->
+    <script src="js/main.js"></script>
+    <script src="./js/lib/anime.min.js"></script>
+
+    <!-- libraries  public -->
+
+    <!-- stock -->
+</body>
+
+</html>

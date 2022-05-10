@@ -1,0 +1,274 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+b {
+    font-weight: bolder;
+}
+
+a {
+    color: #adadad;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+a:hover {
+    color: #878787;
+    text-decoration: underline;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width:576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width:768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width:992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media print {
+    *, *::before, *::after {
+        text-shadow: none!important;
+        box-shadow: none!important;
+    }
+    a:not(.btn) {
+        text-decoration: underline;
+    }
+    img {
+        page-break-inside: avoid;
+    }
+    .container {
+        min-width: 992px!important;
+    }
+}
+
+::-webkit-scrollbar-button {
+    width: 10px;
+    height: 0;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #23272a;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    background-color: #2e3136;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #35383c;
+}
+
+::-webkit-resizer {
+    width: 10px;
+    height: 0;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+.paddings {
+    padding: 35px;
+}
+
+.container {
+    min-height: calc(100vh - 375px);
+}
+
+@media (min-width:768px) {
+    .container {
+        max-width: 1360px;
+    }
+}
+
+@media (min-width:576px) {
+    .container {
+        max-width: 1380px;
+    }
+}
+
+@media (min-width:768px) {
+    .container {
+        max-width: 1380px;
+    }
+}
+
+@media (min-width:576px) {
+    .container {
+        max-width: 1380px;
+    }
+}
+
+@media (max-width:1411px) {
+    .container {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+}
+
+@media (max-width:500px) {
+    .container {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+}
+
+.container {
+    margin-bottom: 20px;
+}
+
+.bc-container {
+    margin-top: 1.5rem!important;
+}
+
+.partners-title {
+    font-family: GolosTextWebDemiBold;
+    font-size: 36px;
+    margin-bottom: 0;
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.partners-title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+@media only screen and (max-width:481px) {
+    .partners-title {
+        font-size: 30px;
+    }
+    .partners-subtitle {
+        font-size: 20px;
+    }
+}
+
+.partners-subtitle {
+    font-family: GolosTextWebRegular;
+    font-size: 24px;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+.figure2 {
+    margin-left: 30px;
+    width: 100px;
+}
+
+@media only screen and (max-width:687px) {
+    .partners-title-wrapper {
+        justify-content: flex-start;
+        flex-direction: column-reverse;
+    }
+    .figure2 {
+        margin-left: 0;
+        margin-bottom: 40px;
+    }
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.partner-img {
+    border-radius: 50%;
+    width: 120px;
+    margin-bottom: 15px;
+}
+
+.partner-main {
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    background: #212529;
+    transition: .2s;
+    border: 1px solid rgba(255, 255, 255, .125);
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.partner-main:hover {
+    background-color: #262b2f;
+    transition: .2s;
+}
+
+.partner-title {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-family: GolosTextWebRegular;
+    margin-bottom: 10px;
+    word-break: break-word;
+    hyphens: auto;
+}
+
+.partner-subtitle {
+    text-decoration: none;
+    color: rgba(255, 255, 255, .77);
+    font-size: 16px;
+    text-align: center;
+}
+
+.partners-grid a:hover {
+    text-decoration: none;
+}
+
+@media only screen and (max-width:1243px) {
+    .partners-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    .partners-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width:676px) {
+    .partners-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+* {
+    outline: none;
+}

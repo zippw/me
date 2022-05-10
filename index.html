@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="img/favicons/site.webmanifest">
+    <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#7F78BD">
+    <meta name="msapplication-TileColor" content="#7f78bd">
+    <meta name="theme-color" content="#7f78bd">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+
+    <!-- link preview -->
+    <meta name="theme-color" content="#7f78bd">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="🎗️ Абоба 🎗️">
+    <meta property="og:url" content="https://zippw.xyz">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:image" content="https://zippw.xyz/img/banner.png">
+    <meta property="og:site_name" content="ГЛАВНАЯ">
+    <meta property="og:title" content="Моё портфолио">
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/svg-items.css">
+    <link rel="stylesheet" href="./css/page.css">
+    <link rel="stylesheet" href="./css/jquery.fullPage.css">
+    <link rel="stylesheet" href="./js/lib/context/skins/osx-dark.css" type="text/css" id="skin" />
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+
+</head>
+
+<body>
+
+    <script>
+        window.onload = async function() {
+            document.querySelector(".ml6 .lettersAnimation").innerHTML = document.querySelector(".ml6 .lettersAnimation").textContent.replace(/\S/g, "<span class='letter'>$&</span>"), document.body.classList.add("loaded_hiding"), await window.setTimeout(async function() {
+                await document.body.classList.add("loaded"), await document.body.classList.remove("loaded_hiding"), await anime.timeline({
+                    loop: !1,
+                    onload: !0
+                }).add({
+                    targets: ".ml6 .letter",
+                    opacity: [0, 1],
+                    translateY: ["-1.1em", 0],
+                    translateZ: 0,
+                    duration: 250,
+                    delay: (t, e) => 20 * e
+                }), await anime.timeline().add({
+                    targets: "#navbarButton",
+                    translateX: [-10, 0],
+                    opacity: [0, 1],
+                    duration: 1e3,
+                    delay: (t, e) => 50 * e
+                })
+                document.querySelector('.ml7 .letters').innerHTML = document.querySelector('.ml7 .letters').textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+                await anime.timeline({
+                        loop: false
+                    })
+                    .add({
+                        targets: '.ml7 .letter',
+                        translateY: ["1.1em", 0],
+                        translateX: ["0.55em", 0],
+                        translateZ: 0,
+                        rotateZ: [180, 0],
+                        duration: 750,
+                        easing: "easeOutExpo",
+                        delay: (el, i) => 200 * i
+                    })
+            }, 500)
+        };
+    </script>
+
+    <div class="preloader">
+        <img class="gooey__img" src="./img/preloader_logo.png">
+        <div class="gooey">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- top-line -->
+    <section class="noselect top-line h" id="top-line">
+        <div class=" container-fluid">
+            <div class="row">
+                <div class="col-md-12" style="padding-right: 0">
+                    <div id="hide" class="logo" alt="">
+                        <a itemprop="url" tabindex="0" href="./" alt="DISCORD" title="На главную">
+                            <!-- <img itemprop="logo" draggable="false" class="hoverable" id="logo" src="./img/logo.svg"> -->
+                            <h1 class="ml6 logoTextAlt noselect">
+                                <span class="text-wrapper">
+                                    <span class="lettersAnimation">ZippWitch ~</span>
+                                </span>
+                            </h1>
+
+                        </a>
+                        <script src="./js/lib/anime.min.js"></script>
+                    </div>
+
+                    <div class="menu-head">
+                        <ul id="hide">
+                            <li itemprop="name" id="navbarButton">
+                                <a itemprop="url" tabindex="0" class="underline__right" href="./portfolio">
+                                    <i class="fas fa-user"></i> Портфолио
+                                </a>
+                            </li>
+                            <li itemprop="name" id="navbarButton">
+                                <a itemprop="url" tabindex="0" class="underline__right" href="https://zippmusic.herokuapp.com">
+                                    <i class="fas fa-music"></i> Музыка
+                                </a>
+                            </li>
+                            <li itemprop="name" id="navbarButton">
+                                <a itemprop="url" tabindex="0" class="underline__right" href="./team">
+                                    <i class="fas fa-handshake"></i> Лучшие
+                                </a>
+                            </li>
+                            <li itemprop="name" id="navbarButton"><a itemprop="url" tabindex="0" class="underline__right" href="https://www.donationalerts.com/r/zippwitch"><i
+                                        class="fas fa-coffee"></i>
+                                    Донат</a></li>
+                            <li itemprop="name" id="navbarButton">
+                                <a itemprop="url" tabindex="0" title="Нажмите L для переключения темы" class="underline__right" onclick="changeTheme()"><i id="themeButtonIcon"
+                                        class="fas fa-sun-o"></i> Тема
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="hamburger" class="hamburger-menu">
+                    <input id="menu__toggle" type="checkbox" onclick="this.checked?anime.timeline().add({targets:'.menu__box',translateX:['-120%','-30%'],duration:800}).add({targets:'#menu__item',translateX:[-10,0],duration:300,delay:(e,a)=>50*a}):anime.timeline().add({targets:'.menu__box',translateX:['-30%','-20%'],duration:150,easing:'easeInOutCubic'}).add({targets:'.menu__box',translateX:['-20%','-120%'],duration:400,easing:'easeInOutCubic'});"
+                    />
+                    <label class="menu__btn" for="menu__toggle">
+                        <span></span>
+                    </label>
+                    <ul class="menu__box">
+                        <li id="menu__item">
+                            <div class="menu__item-icon-container"><i class="fas fa-home"></i></div>
+                            <div class="menu__item-text-container"><a class="" href="https://zippw.xyz/">Главная</a>
+                            </div>
+                        </li>
+                        <li id="menu__item">
+                            <div class="menu__item-icon-container"><i class="fas fa-user"></i></div>
+                            <div class="menu__item-text-container"><a href="https://zippw.xyz/portfolio">Портфолио</a>
+                            </div>
+                        </li>
+                        <li id="menu__item">
+                            <div class="menu__item-icon-container"><i class="fas fa-music"></i></div>
+                            <div class="menu__item-text-container"><a href="https://zippmusic.herokuapp.com">Музыка</a></div>
+                        </li>
+                        <li id="menu__item">
+                            <div class="menu__item-icon-container"><i class="fas fa-handshake"></i></div>
+                            <div class="menu__item-text-container"><a href="https://zippw.xyz/team">Лучшие</a></div>
+                        </li>
+                        <li id="menu__item">
+                            <div class="menu__item-icon-container"><i class="fas fa-coffee"></i></div>
+                            <div class="menu__item-text-container"><a href="https://www.donationalerts.com/r/zippwitch">Донат</a></div>
+                        </li>
+                        <li id="menu__item">
+                            <div class="menu__item-icon-container"><i id="" class="fas fa-sun-o"></i></div>
+                            <div class="menu__item-text-container"><a onclick="changeTheme()">Тема</a></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- bg effects -->
+    <div class="area">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <script src="./js/lib/esm/index.js"></script>
+    <div id="notify"></div>
+
+    <!-- content -->
+    <div class="fullpage" id="js-fullpage">
+        <div class="section">
+            <header class="lt js-moon home-page-header">
+
+                <div class="header">
+                    <div style="z-index: -1" data-relative-input="true" id="parallaxHeader">
+                        <!-- <h2 data-depth="0.1" class="js-moon h2-main noselect">~ Привет ~</h2> -->
+                        <h2 data-depth="0.3" class="js-moon h2-main noselect ml7">
+                            <span class="text-wrapper">
+                                <span class="letters">~ Привет ~</span>
+                            </span>
+                        </h2>
+                        <img data-depth="0.6" class="parallaxImageHeader" src="img/header_bg.jpg">
+                        <img data-depth="0.4" class="parallaxImageHeader" src="./img/hp_parallax_bg.png">
+                    </div>
+
+                    <style>
+                        .fancy {
+                            line-height: 0.5;
+                            text-align: center;
+                        }
+                        
+                        .fancy span {
+                            font-family: 'Montserrat Light', sans-serif;
+                            font-style: bold;
+                            display: inline-block;
+                            position: relative;
+                        }
+                        
+                        .fancy span:before,
+                        .fancy span:after {
+                            content: "";
+                            position: absolute;
+                            height: 5px;
+                            border-bottom: 1px solid white;
+                            top: 0;
+                            width: 400px;
+                        }
+                        
+                        .fancy span:before {
+                            right: 100%;
+                            margin-right: 15px;
+                        }
+                        
+                        .fancy span:after {
+                            left: 100%;
+                            margin-left: 15px;
+                        }
+                        
+                        .paragraph {
+                            margin-top: 30px;
+                            color: #ffffff99;
+                            font-family: 'Montserrat Light';
+                            transition: .3s;
+                        }
+                    </style>
+
+                    <div class="moon__img js-parallax-moon" style="transform: translate3d(0px, 0px, 0px) rotate(0.0001deg); transform-style: preserve-3d; backface-visibility: hidden; pointer-events: none;">
+                        <div class="moon__front layer" data-depth="0.2" style="transform: translate3d(-5.7px, -0.6px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block; left: 0px; top: 0px;">
+                            <div class="moon__text-wrap">
+                                <p class="moon__text js-moon fancy noselect" data-depth="5.5"><span>PORTFOLIO</span></p>
+                                <p style="font-family: 'Montserrat Medium'" class="moon__text js-moon paragraph noselect">
+                                    Мб дезигнер, мб мьюзишн, мб Zipp <img style="filter: none!important; padding-bottom: 0px; height: 15px" src="./img/icons/emojis/kaif.png" alt=":kaif:" title=":kaif:">
+                                </p>
+
+                                <!-- 
+                                <div class="moon__back layer"
+                                    style="z-index: -10;height: 10px;">
+                                    <img class="js-moon" src="./img/banner.png">
+                                </div> -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a style="outline:none; width: 300px;" href="./portfolio">
+                    <script>
+                        let pic = document.getElementsByClassName('parallaxImageHeader')[0]
+                    </script>
+                    <button onmouseover="pic.style.filter = 'blur(10px) hue-rotate(20deg)'" onmouseout="pic.style.filter = ''" href="./portfolio" data-depth="0.5" style="z-index: 9" class="button black2 noselect">Портфолио</button>
+                </a>
+                <div class="page-num-main-page page-num mous">
+                    <style>
+                        .fa-chevron-down {
+                            transition: .4s
+                        }
+                        
+                        .fa-chevron-down:hover {
+                            transform: translateY(10px)
+                        }
+                    </style>
+                    <p>
+                        <a href="#about-me" class="fas fa-chevron-down"></a>
+                    </p>
+                </div>
+            </header>
+
+        </div>
+        <div class="section">
+            <div class="fullpage__slide">
+                <div class="title">
+                    <h2 class="lt title__text js-letter noselect">Обо мне</h2>
+                    <div class="border js-letter"><span></span><span class="js-letter"></span></div>
+                    <p class="lt title__lead js-letter noselect">Мне нравится дизайн, игры<br>и музыка.</p>
+                </div>
+                <a class="hover01 image image--about" href="./about-me">
+                    <div class="image__over">
+                        <div class="image__cover"></div>
+                        <div class="image__cover"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="section">
+            <div class="fullpage__slide">
+                <div class="title">
+                    <h2 class="lt title__text js-letter noselect">Лучшие</h2>
+                    <div class="border js-letter"><span></span><span class="js-letter"></span></div>
+                    <p class="lt title__lead js-letter noselect">Друзья, сотрудники проекта<br> и поддерживающие</p>
+                </div>
+                <a class="image image--friends" href="./team">
+                    <div class="image__over">
+                        <div class="image__cover"></div>
+                        <div class="image__cover"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="section">
+            <div class="lt fullpage__slide js-KtoVstavilEtoToVKodtLox js-footer">
+
+
+                <footer class="home-page-footer">
+
+                    <canvas class="canvas__footer" style="position: absolute; background-color: #1A1C21; " id="nokey" width="800" height="800"></canvas>
+
+                    <style>
+                        .h2-footer {
+                            left: calc(50% - 204.4px);
+                            color: #fff;
+                            font-size: 70px;
+                            transition: font-size .3s
+                        }
+                        
+                        h3 {
+                            font-family: 'Montserrat Light';
+                            text-align: center;
+                            transition: font-size .3s;
+                        }
+                        
+                        h3 a:hover {
+                            text-decoration: underline;
+                        }
+                        
+                        h3 a {
+                            font-family: 'Montserrat Medium';
+                        }
+                        
+                        .text {
+                            position: absolute;
+                            top: 35%;
+                            left: calc(50.5% - 400px);
+                            height: 50px;
+                            width: 800px;
+                            text-align: center;
+                        }
+                        
+                        .linksFooter {
+                            font-size: 15px;
+                        }
+                        
+                        .linksFooter img {
+                            height: 18px;
+                        }
+                        
+                        .footerLinksLine {
+                            margin-top: 24px;
+                            margin-bottom: 24px;
+                            background-color: #fff;
+                            width: 600px;
+                            height: 1px;
+                            margin-left: calc(50% - 300px)
+                        }
+                        
+                        @media screen and (max-width: 423px) {
+                            h3 {
+                                font-size: 10px
+                            }
+                            .h2-footer {
+                                font-size: 40px
+                            }
+                            .linksFooter {
+                                font-size: 10px
+                            }
+                        }
+                        
+                        .tooltip {
+                            position: relative;
+                            display: inline-block;
+                        }
+                        
+                        .tooltip .tooltiptext {
+                            visibility: hidden;
+                            opacity: 0;
+                            font-size: 13px;
+                            width: 120px;
+                            height: 24px;
+                            border: 1px solid #343a40;
+                            background-color: black;
+                            color: #fff;
+                            text-align: center;
+                            border-radius: 6px;
+                            padding: 5px 2px;
+                            top: -30px;
+                            left: 0px;
+                            /* Position the tooltip */
+                            position: absolute;
+                            z-index: 1;
+                            transition: .2s
+                        }
+                        
+                        .tooltip:hover .tooltiptext {
+                            visibility: visible;
+                            opacity: 1;
+                            transition: visibility 0s, opacity 0.18s linear;
+                        }
+                        
+                        footer ul li {
+                            cursor: default
+                        }
+                    </style>
+                    <script>
+                        function copyLink(e, t) {
+                            let o = e.target.dataset.link,
+                                n = document.createElement("INPUT");
+                            n.value = o, document.body.appendChild(n), n.select(), console.log(n.value), document.execCommand("copy"), document.body.removeChild(n), t ? Notify({
+                                title: "Тег скопирован!",
+                                position: "bottom center",
+                                type: "success"
+                            }) : Notify({
+                                title: "Ссылка неккоректна",
+                                position: "bottom center",
+                                type: "danger"
+                            })
+                        }
+                    </script>
+                    <div class="text" data-relative-input="true">
+                        <h2 class="h2-footer noselect">~ Подвал ~</h2>
+                        <h3 style="font-style: italic" class="noselect">Все права защищены ©️ 2021 г. | <a href="./">zippw.xyz</a></h3>
+                        <div class="footerLinksLine"></div>
+
+                        <h3 style="margin-top: 50px;" class="linksFooter">・Discord разработчика / владельца:
+                            <div class="tooltip"><a onclick="copyLink(event, `ZippWitch#7777`)" data-link="ZippWitch#7777">ZippWitch#7777</a><span class="tooltiptext">Скопировать</span></div>
+
+                            <h3 class="linksFooter">・Gmail почта: <a href="mailto:zippwickness@gmail.com">zippwickness@gmail.com</a></h3>
+                            <h3 class="linksFooter">・Не нажимать: <a href="https://discord.gg/ffCnXREV79">подозрительная
+                                    ссылка</a></h3>
+
+                        </h3>
+                    </div>
+                    <script src="js/canvas-footer.js"></script>
+                    <script src="./js/lib/parallax.js"></script>
+                    <script>
+                        // isMobile = navigator.userAgent.match(/(iPhone|iPod|Android|BlackBerry|iPad|IEMobile|Opera Mini)/); if (!isMobile) {
+                        // }
+                        var parallaxHeader = document.getElementById('parallaxHeader');
+                        var sceneHeader = new Parallax(parallaxHeader, {
+                            frictionX: 0.05,
+                            frictionY: 0.05
+                        });
+                    </script>
+                </footer>
+            </div>
+        </div>
+        </main>
+
+        <script src="./js/lib/context/context.js"></script>
+        <script>
+            const skinActivator = t => {
+                    document.getElementById("skin").setAttribute("href", `./js/lib/context/skins/${t.data.value}.css`), t.handled = !0
+                },
+                chromeContextMenu = new ContextMenu(document.body, [{
+                    text: "Назад",
+                    icon: "arrow-left",
+                    hotkey: "Alt+Стрелка влево",
+                    disabled: !(window.history.length > 1),
+                    onclick: t => {
+                        window.history.back()
+                    }
+                }, {
+                    text: "Вперёд",
+                    icon: "arrow-right",
+                    hotkey: "Alt+Стрелка вправо",
+                    disabled: !0,
+                    onclick: t => {
+                        window.history.forward()
+                    }
+                }, {
+                    text: "Перезагрузить",
+                    icon: "refresh",
+                    hotkey: "Ctrl+R",
+                    onclick: t => {
+                        window.location.reload()
+                    }
+                }, null, {
+                    text: "Сменить тему",
+                    icon: "adjust",
+                    hotkey: "L",
+                    onclick: t => {
+                        changeTheme()
+                    }
+                }, null, {
+                    text: "Печать...",
+                    icon: "print",
+                    hotkey: "Ctrl+P",
+                    onclick: t => {
+                        chromeContextMenu.hide(), window.print()
+                    }
+                }, null, {
+                    text: " Просмотр кода страницы",
+                    icon: "code-o",
+                    hotkey: "Ctrl+U",
+                    onclick: t => {
+                        window.open("view-source:zippw.xyz")
+                    }
+                }]);
+            chromeContextMenu.install();
+        </script>
+
+        <!-- libraries local -->
+        <script src="./js/lib/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+        <script src="./js/lib/barba.min.js"></script>
+        <script type="text/javascript" src="./js/lib/tilt.js"></script>
+        <script type="text/javascript">
+            isMobile = navigator.userAgent.match(/(iPhone|iPod|Android|BlackBerry|iPad|IEMobile|Opera Mini)/);
+            if (!isMobile) {
+                VanillaTilt.init(document.querySelectorAll(".image"), {
+                    // reverse: true,
+                    max: 5,
+                    // speed: 200,
+                    glare: true,
+                    "max-glare": 0.5,
+                    gyroscope: false,
+                });
+            }
+        </script>
+
+        <!-- libraries public -->
+        <!-- <script src="https://ajax.googleapis.om/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        </script> -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script> -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script> -->
+
+        <!-- stock -->
+        <script src="./js/lib/jquery.fullPage.js"></script>
+        <script src="./js/common.min.js"></script>
+        <script src="js/main.js"></script>
+</body>
+
+</html>

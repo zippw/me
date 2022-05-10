@@ -1,0 +1,52 @@
+/* sparkleStarTopRight */
+
+::-webkit-input-placeholder{font-family:var(--font-primary);font-weight:400;}
+::-moz-placeholder{font-family:var(--font-primary);font-weight:400;}
+:-ms-input-placeholder{font-family:var(--font-primary);font-weight:400;}
+::placeholder{font-family:var(--font-primary);font-weight:400;}
+::-webkit-input-placeholder{font-family:var(--font-primary);text-rendering:optimizeLegibility;}
+::-moz-placeholder{font-family:var(--font-primary);text-rendering:optimizeLegibility;}
+:-ms-input-placeholder{font-family:var(--font-primary);text-rendering:optimizeLegibility;}
+::placeholder{font-family:var(--font-primary);text-rendering:optimizeLegibility;}
+.standardSidebarView-3F1I7i *{-webkit-box-sizing:border-box;box-sizing:border-box;}
+.sparkle-1qyWC9{position:absolute;}
+.sparkleStarTopRight-1uWZTi{bottom:calc(100% - 1px);left:calc(100% + 10px);width:12.75px;height:12.75px;transform:rotate(15deg);animation: pulse 3s ease infinite;}
+.theme-dark .sparkle-1qyWC9{color:#fff;}
+
+/* sparkleStarRight */
+
+/*! CSS Used from: https://discord.com/assets/0.f8e8beb137dada42b6a7.css */
+::-webkit-input-placeholder{font-family:var(--font-primary);font-weight:400;}
+::-moz-placeholder{font-family:var(--font-primary);font-weight:400;}
+:-ms-input-placeholder{font-family:var(--font-primary);font-weight:400;}
+::placeholder{font-family:var(--font-primary);font-weight:400;}
+::-webkit-input-placeholder{font-family:var(--font-primary);text-rendering:optimizeLegibility;}
+::-moz-placeholder{font-family:var(--font-primary);text-rendering:optimizeLegibility;}
+:-ms-input-placeholder{font-family:var(--font-primary);text-rendering:optimizeLegibility;}
+::placeholder{font-family:var(--font-primary);text-rendering:optimizeLegibility;}
+.standardSidebarView-3F1I7i *{-webkit-box-sizing:border-box;box-sizing:border-box;}
+.sparkle-1qyWC9{position:absolute;}
+.sparkleStarRight-3STViN{bottom:283px;left:calc(100% + 15px);transform:rotate(15deg);animation: pulse 2s ease infinite;}
+.sparkleStarRight-3STViN{height:7.44px;width:7.44px;}
+.theme-dark .sparkle-1qyWC9{color:#fff;}
+/* sparkleStarBottomLeft */
+
+::-webkit-input-placeholder{font-family:var(--font-primary);font-weight:400;}
+::-moz-placeholder{font-family:var(--font-primary);font-weight:400;}
+:-ms-input-placeholder{font-family:var(--font-primary);font-weight:400;}
+::placeholder{font-family:var(--font-primary);font-weight:400;}
+::-webkit-input-placeholder{font-family:var(--font-primary);text-rendering:optimizeLegibility;}
+::-moz-placeholder{font-family:var(--font-primary);text-rendering:optimizeLegibility;}
+:-ms-input-placeholder{font-family:var(--font-primary);text-rendering:optimizeLegibility;}
+::placeholder{font-family:var(--font-primary);text-rendering:optimizeLegibility;}
+.standardSidebarView-3F1I7i *{-webkit-box-sizing:border-box;box-sizing:border-box;}
+.sparkle-1qyWC9{position:absolute;}
+.sparkleStarBottomLeft-3dycVF{height:7.44px;width:7.44px;animation: pulse 1s ease infinite;}
+.sparkleStarBottomLeft-3dycVF{top:calc(100% - 290px);right:47px;transform:rotate(15deg);}
+.theme-dark .sparkle-1qyWC9{color:#fff;}
+  
+@keyframes pulse {
+  from { opacity: 1;transform: rotate(15deg)scale(1); }
+  50% { opacity: 0.6;transform: rotate(15deg)scale(1.2); }
+  to { opacity: 1;transform: rotate(15deg)scale(1); }
+}

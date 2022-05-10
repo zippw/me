@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- website -->
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="img/favicons/site.webmanifest">
+    <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#7F78BD">
+    <meta name="msapplication-TileColor" content="#7f78bd">
+    <meta name="theme-color" content="#7f78bd">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тудым судым</title>
+
+    <!-- link preview -->
+    <meta name="theme-color" content="#7f78bd">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="🎗️ Абоба 🎗️">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:image" content="https://zippw.xyz/img/banner.png">
+    <meta property="og:site_name" content="ТУДЫМ СУДЫМ">
+    <meta property="og:url" content="https://zippw.xyz/game3000">
+    <meta property="og:title" content="Моё портфолио">
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./js/lib/context/skins/osx-dark.css" type="text/css" id="skin" />
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+</head>
+
+<body style="cursor: row-resize">
+    <script>
+        window.onload=async function(){document.querySelector(".ml6 .lettersAnimation").innerHTML=document.querySelector(".ml6 .lettersAnimation").textContent.replace(/\S/g,"<span class='letter'>$&</span>"),document.body.classList.add("loaded_hiding"),await window.setTimeout(async function(){document.body.classList.add("loaded"),document.body.classList.remove("loaded_hiding"),await anime.timeline({loop:!1,onload:!0}).add({targets:".ml6 .letter",opacity:[0,1],translateY:["-1.1em",0],translateZ:0,duration:250,delay:(t,e)=>20*e}),await anime.timeline().add({targets:"#navbarButton",translateX:[-10,0],opacity:[0,1],duration:1e3,delay:(t,e)=>50*e})},500)};
+    </script>
+    <div id="notify"></div>
+
+    <!-- top-line -->
+    <section class="noselect top-line h" id="top-line">
+        <div class=" container-fluid">
+            <div class="row">
+                <div class="col-md-12" style="padding-right: 0">
+                    <div id="hide" class="logo" alt="">
+                        <a itemprop="url" tabindex="0" href="./" alt="DISCORD" title="На главную">
+                            <h1 class="ml6 logoTextAlt noselect">
+                                <span class="text-wrapper">
+                                    <span class="lettersAnimation">ZippWitch
+                                        ~</span>
+                                </span>
+                            </h1>
+                        </a>
+                    </div>
+
+                    <div class="menu-head">
+                        <ul id="hide">
+                            <li itemprop="name" id="navbarButton">
+                                <a itemprop="url" tabindex="0" class="underline__right" href="./portfolio">
+                                    <i class="fas fa-user"></i> Портфолио
+                                </a>
+                            </li>
+                            <li itemprop="name" id="navbarButton">
+                                <a itemprop="url" tabindex="0" class="underline__right" href="https://zippmusic.herokuapp.com">
+                                    <i class="fas fa-music"></i> Музыка
+                                </a>
+                            </li>
+                            <li itemprop="name" id="navbarButton">
+                                <a itemprop="url" tabindex="0" class="underline__right" href="./team">
+                                    <i class="fas fa-handshake"></i> Лучшие
+                                </a>
+                            </li>
+                            <li itemprop="name" id="navbarButton"><a itemprop="url" tabindex="0" class="underline__right"
+                                    href="https://www.donationalerts.com/r/zippwitch"><i class="fas fa-coffee"></i>
+                                    Донат</a></li>
+                            <li itemprop="name" id="navbarButton">
+                                <a itemprop="url" tabindex="0" title="Нажмите L для переключения темы"
+                                    class="underline__right" onclick="changeTheme()"><i id="themeButtonIcon"
+                                        class="fas fa-sun-o"></i> Тема
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="hamburger" class="hamburger-menu">
+                    <input id="menu__toggle" type="checkbox" onclick="this.checked?anime.timeline().add({targets:'.menu__box',translateX:['-120%','-30%'],duration:800}).add({targets:'#menu__item',translateX:[-10,0],duration:300,delay:(e,a)=>50*a}):anime.timeline().add({targets:'.menu__box',translateX:['-30%','-20%'],duration:150,easing:'easeInOutCubic'}).add({targets:'.menu__box',translateX:['-20%','-120%'],duration:400,easing:'easeInOutCubic'});" />
+                    <label class="menu__btn" for="menu__toggle">
+                        <span></span>
+                    </label>
+                    <ul class="menu__box">
+                        <li id="menu__item">
+                            <div class="menu__item-icon-container"><i class="fas fa-home"></i></div>
+                            <div class="menu__item-text-container"><a class="" href="https://zippw.xyz/">Главная</a>
+                            </div>
+                        </li>
+                        <li id="menu__item">
+                            <div class="menu__item-icon-container"><i class="fas fa-user"></i></div>
+                            <div class="menu__item-text-container"><a href="https://zippw.xyz/portfolio">Портфолио</a>
+                            </div>
+                        </li>
+                        <li id="menu__item">
+                            <div class="menu__item-icon-container"><i class="fas fa-music"></i></div>
+                            <div class="menu__item-text-container"><a href="https://zippmusic.herokuapp.com">Музыка</a></div>
+                        </li>
+                        <li id="menu__item">
+                            <div class="menu__item-icon-container"><i class="fas fa-handshake"></i></div>
+                            <div class="menu__item-text-container"><a href="https://zippw.xyz/team">Лучшие</a></div>
+                        </li>
+                        <li id="menu__item">
+                            <div class="menu__item-icon-container"><i class="fas fa-coffee"></i></div>
+                            <div class="menu__item-text-container"><a
+                                    href="https://www.donationalerts.com/r/zippwitch">Донат</a></div>
+                        </li>
+                        <li id="menu__item">
+                            <div class="menu__item-icon-container"><i id="" class="fas fa-sun-o"></i></div>
+                            <div class="menu__item-text-container"><a onclick="changeTheme()">Тема</a></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./js/lib/context/context.js"></script>
+    <script>
+        const skinActivator = t => { document.getElementById("skin").setAttribute("href", `./js/lib/context/skins/${t.data.value}.css`), t.handled = !0 }, chromeContextMenu = new ContextMenu(document.body, [{ text: "Назад", icon: "arrow-left", hotkey: "Alt+Стрелка влево", disabled: !(window.history.length > 1), onclick: t => { window.history.back() } }, { text: "Вперёд", icon: "arrow-right", hotkey: "Alt+Стрелка вправо", disabled: !0, onclick: t => { window.history.forward() } }, { text: "Перезагрузить", icon: "refresh", hotkey: "Ctrl+R", onclick: t => { window.location.reload() } }, null, { text: "Сменить тему", icon: "adjust", hotkey: "L", onclick: t => { changeTheme() } }, null, { text: "Печать...", icon: "print", hotkey: "Ctrl+P", onclick: t => { chromeContextMenu.hide(), window.print() } }, null, { text: " Просмотр кода страницы", icon: "code-o", hotkey: "Ctrl+U", onclick: t => { window.open("view-source:zippw.xyz") } }]); chromeContextMenu.install();
+    </script>
+
+    <!-- content -->
+    <script src="./js/lib/esm/index.js"></script>
+    <div id="notify"></div>
+    <script>
+        Notify({ title: 'Взлом жопы! Уголь активирован!', position: 'bottom center', type: 'danger' })
+    </script>
+    <!-- libraries local -->
+    <script src="js/main.js"></script>
+
+    <!-- libraries  public -->
+
+    <!-- stock -->
+    <script src="./js/game.js"></script>
+    <script src="./js/lib/anime.min.js"></script>
+
+</body>
+
+</html>
